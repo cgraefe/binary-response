@@ -12,7 +12,7 @@ The InMemorySource provides a basic in-memory implementation of this contract:
 use Graefe\Net\Http\BinaryResponse;
 use Graefe\Net\Http\BinaryResponse\InMemorySource;
 
-$source = new InMemorySource('This could be any binary data, e.g. read from a BLOB column in a DB.');
+$source = new InMemorySource('Any binary data, maybe from a BLOB column.');
 $response = new BinaryResponse($source);
 $reponse->send();
 ```
