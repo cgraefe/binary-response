@@ -2,7 +2,6 @@
 
 namespace Graefe\Net\Http\BinaryResponse;
 
-
 class InMemorySource implements VirtualFileSource
 {
     /** @var mixed The payload data. */
@@ -145,5 +144,4 @@ class InMemorySource implements VirtualFileSource
         $this->offset += strlen($data);
         return $data;
     }
-
 }

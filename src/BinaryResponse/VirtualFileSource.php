@@ -4,7 +4,6 @@ namespace Graefe\Net\Http\BinaryResponse;
 
 interface VirtualFileSource
 {
-
     /**
      * @return string|null The file name for HTTP download.
      */
@@ -54,5 +53,4 @@ interface VirtualFileSource
      * @return mixed The data read.
      */
     public function read($length);
-
 }

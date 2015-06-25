@@ -240,14 +240,12 @@ class BinaryResponse extends Response
      */
     protected function sleep($sec)
     {
-        if ($sec <= 0)
-            return;
-        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            com_message_pump(round($sec * 1000));
-        } else {
-            usleep(round($sec * 1000000));
+        if ($sec > 0) {
+            if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+                com_message_pump(round($sec * 1000));
+            } else {
+                usleep(round($sec * 1000000));
+            }
         }
     }
-
 }
-
